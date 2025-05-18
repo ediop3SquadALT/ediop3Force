@@ -19,7 +19,6 @@ import socket
 import urllib3
 from datetime import datetime
 
-# Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class ediop3Force(cmd.Cmd):
@@ -208,7 +207,6 @@ class ediop3Force(cmd.Cmd):
         print("[+] Exiting...")
         return True
 
-    # ========== ENHANCED BRUTE FORCE MODULES ==========
     async def _run_ssh_brute(self):
         if not self.port:
             self.port = 22
